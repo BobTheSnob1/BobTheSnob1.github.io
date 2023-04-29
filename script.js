@@ -23,9 +23,9 @@ async function generateText(prompt) {
     }
   }
   
-  //generateText('Hello, my name is')
-  //  .then(console.log)
-  //  .catch(console.error);
+  generateText('Hello, my name is')
+    .then(console.log)
+    .catch(console.error);
   
   infoText.innerHTML = generateText("One interesting fact about hats is:");
 
