@@ -32,13 +32,6 @@ body {
     margin-bottom: 20px;
   }
   
-  .progress-bar {
-    height: 100%;
-    width: 0;
-    background-color: #4CAF50;
-    border-radius: 10px;
-  }
-  
   .timer {
     font-size: 48px;
     font-weight: bold;
@@ -51,4 +44,23 @@ body {
     margin-top: 20px;
     text-align: center;
   }
+  
+  .progress-bar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 0;
+    background-color: #4CAF50;
+    border-radius: 10px;
+  }
+  
+  .percentage {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 10px;
+    line-height: 50px;
+    height: 100%;
+  }
+  
   
