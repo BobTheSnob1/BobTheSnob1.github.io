@@ -6,6 +6,29 @@ const endDate = new Date('2025-03-25T00:00:00');
 const totalTime = (endDate - startDate) / 1000;
 let currentTime = 0;
 
+async function generateText(prompt) {
+    const response = await fetch('YOUR_VERCEL_FUNCTION_URL', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ prompt: prompt }),
+    });
+  
+    if (response.ok) {
+      const text = await response.text();
+      return text.trim();
+    } else {
+      throw new Error('Error generating text');
+    }
+  }
+  
+  //generateText('Hello, my name is')
+  //  .then(console.log)
+  //  .catch(console.error);
+  
+  infoText.innerHTML = generateText("One interesting fact about hats is:");
+
 function updateProgressBar() {
   const now = new Date();
   currentTime = (now - startDate) / 1000;

@@ -45,3 +45,10 @@ body {
     color: #fff;
   }
   
+  .info-text {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
